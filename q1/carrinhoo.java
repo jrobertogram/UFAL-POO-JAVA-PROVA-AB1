@@ -1,8 +1,11 @@
 package q1;
+
+import java.util.ArrayList;
+
 public class carrinhoo {
   private int quantidade;
   private double preco_total;
-  private Produto[] produtos;
+  private ArrayList<Produto> produtos = new ArrayList<>();
 
 
   public int getQuantidade() {
@@ -28,12 +31,14 @@ public class carrinhoo {
   public void setPreco_total(float preco_total) {
     this.preco_total = preco_total;
   }
-  public Produto[] getProdutos() {
+
+  public ArrayList<Produto> getProdutos() {
     return produtos;
   }
-  public void setProdutos(Produto[] produtos) {
+  public void setProdutos(ArrayList<Produto> produtos) {
     this.produtos = produtos;
   }
+
 
   
 
