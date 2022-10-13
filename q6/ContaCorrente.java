@@ -4,6 +4,8 @@ public class ContaCorrente implements Conta{
 
     protected double saldo;
     
+
+    
     ContaCorrente() {
         saldo = 0;
     }
@@ -39,5 +41,13 @@ public class ContaCorrente implements Conta{
     @Override
     public String toString() {
         return String.format("%f\n", saldo);
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
     }
 }

@@ -5,12 +5,11 @@ class ContaEspecial extends ContaCorrente implements Conta{
 
     public ContaEspecial(float limite) {
         this.limite = limite;
-        saldo = super.saldo;
     }
 
     @Override
     public boolean sacar(double valor) {
-        if (super.saldo + limite - valor > 0){
+        if (super.getSaldo() + limite - valor > 0){
             super.saldo -= valor;
             return true;
         }else{
@@ -21,6 +20,6 @@ class ContaEspecial extends ContaCorrente implements Conta{
 
     @Override
     public String toString() {
-        return String.format("%f\n", saldo+limite);
+        return String.format("%f\n", super.saldo+limite);
     }
 }
