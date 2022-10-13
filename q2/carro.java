@@ -1,10 +1,10 @@
 package q2;
 
-public class carro {
+public class Carro {
   private String nome;
   double quantidade_pessoa;
   
-  public carro(String nome, double quantidade_pessoa) {
+  public Carro(String nome, double quantidade_pessoa) {
     this.nome = nome;
     this.quantidade_pessoa = quantidade_pessoa;
   }

@@ -1,19 +1,21 @@
 package q2;
 
+import java.util.ArrayList;
+
 public class Main {
 
   public static void main(String[] args) {
 
-    carro c1 = new carro("Gol", 2);
-    carro c2 = new carro("BMW", 1);
-    carro c3 = new carro("Fusca", 3);
+    Carro c1 = new Carro("Gol", 2);
+    Carro c2 = new Carro("BMW", 1);
+    Carro c3 = new Carro("Fusca", 3);
     estacionamento est = new estacionamento();
 
-    carro[] carros = new carro[3];
+    ArrayList<Carro> carros = new ArrayList<>();
 
-		carros[0] = c1;
-		carros[1] = c2;
-    carros[2] = c3;
+    carros.add(c1);
+    carros.add(c2);
+    carros.add(c3);
 		
 		est.setCarros(carros);
     est.get_quantidade_pessoa_total();

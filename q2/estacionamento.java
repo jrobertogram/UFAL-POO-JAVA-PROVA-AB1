@@ -1,12 +1,15 @@
 package q2;
+
+import java.util.ArrayList;
+
 public class estacionamento {
   private int quantidade_pessoa_total;
-  private carro[] carros;
+  private ArrayList<Carro> carros = new ArrayList<>();
 
-
+  
   public double get_quantidade_pessoa_total() {
     this.quantidade_pessoa_total = 0;
-    for (carro carro: carros){
+    for (Carro carro: carros){
       double qp = carro.quantidade_pessoa;
       this.quantidade_pessoa_total += qp;
     }
@@ -14,7 +17,7 @@ public class estacionamento {
   }
 
   public void lista_Carros(){
-    for (carro carro: carros){
+    for (Carro carro: carros){
       System.out.println(carro.getNome() + " - " + carro.getQuantidade_pessoa());
     }
   }
@@ -24,12 +27,15 @@ public class estacionamento {
   public void setQuantidade_pessoa_total(int quantidade_pessoa_total) {
     this.quantidade_pessoa_total = quantidade_pessoa_total;
   }
-  public carro[] getCarros() {
+
+  public ArrayList<Carro> getCarros() {
     return carros;
   }
-  public void setCarros(carro[] carros) {
+
+  public void setCarros(ArrayList<Carro> carros) {
     this.carros = carros;
   }
+  
   
 }
 
