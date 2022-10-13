@@ -3,8 +3,9 @@ package q6;
 class ContaEspecial extends ContaCorrente implements Conta{
     private float limite;
 
-    public ContaEspecial( float limite) {
+    public ContaEspecial(float limite) {
         this.limite = limite;
+        saldo = super.saldo;
     }
 
     @Override
