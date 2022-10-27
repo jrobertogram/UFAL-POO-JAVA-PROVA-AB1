@@ -1,8 +1,12 @@
 package q1;
-
 public class Produto {
   private String nome;
-  double valor;
+  protected double valor;
+
+  public Produto(String nome, double valor) {
+    this.nome = nome;
+    this.valor = valor;
+  }
 
   public String getNome() {
     return nome;
@@ -19,11 +23,15 @@ public class Produto {
   public void setValor(double valor) {
     this.valor = valor;
   }
+  
+  public void addProduto(String n, double v){
+    this.setNome(n);
+    this.setValor(v);
+    System.out.println("Adicionado Produto com Sucesso!");
+  }
 
-  public Produto(String nome, double valor) {
-    this.nome = nome;
-    this.valor = valor;
-  }  
-  
-  
+  public void removerProduto(){
+
+  }
 }
+

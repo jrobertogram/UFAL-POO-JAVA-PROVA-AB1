@@ -1,42 +1,40 @@
 package q2;
 
-import java.util.ArrayList;
+public class Estacionamento {
+  private int quantidadePessoasTotal;
+  private Carro[] carros;
 
-public class estacionamento {
-  private int quantidade_pessoa_total;
-  private ArrayList<Carro> carros = new ArrayList<>();
+  //Construtor
+  public Estacionamento() {
+  }
 
-  
-  public double get_quantidade_pessoa_total() {
-    this.quantidade_pessoa_total = 0;
-    for (Carro carro: carros){
-      double qp = carro.quantidade_pessoa;
-      this.quantidade_pessoa_total += qp;
+  //Getters e Setters
+  public int getQuantidadePessoasTotal() { //** */
+    this.quantidadePessoasTotal = 0;
+    for (Carro carro:carros){
+      double qp = carro.quantidadePessoas;
+      this.quantidadePessoasTotal += qp;
     }
-    return quantidade_pessoa_total;
+    return quantidadePessoasTotal;
   }
 
-  public void lista_Carros(){
-    for (Carro carro: carros){
-      System.out.println(carro.getNome() + " - " + carro.getQuantidade_pessoa());
-    }
-  }
-  public int getQuantidade_pessoa_total() {
-    return quantidade_pessoa_total;
-  }
-  public void setQuantidade_pessoa_total(int quantidade_pessoa_total) {
-    this.quantidade_pessoa_total = quantidade_pessoa_total;
+  public void setQuantidadePessoasTotal(int quantidadePessoasTotal) {
+    this.quantidadePessoasTotal = quantidadePessoasTotal;
   }
 
-  public ArrayList<Carro> getCarros() {
+  public Carro[] getCarros() {
     return carros;
   }
 
-  public void setCarros(ArrayList<Carro> carros) {
+  public void setCarros(Carro[] carros) {
     this.carros = carros;
   }
   
+  // Método Personalizado
+  public void listaCarros(){
+    for (Carro carro: carros){
+      System.out.println(carro.getNome() + " - " +carro.getQuantidadePessoas());
+    }
+  }
   
 }
-
-

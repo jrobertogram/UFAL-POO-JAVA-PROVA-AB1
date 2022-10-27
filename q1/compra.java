@@ -1,24 +1,19 @@
 package q1;
 
-import java.util.ArrayList;
-
-
-public class compra {
+public class Compra {
   public static void main(String[] args) {
+    Produto p1 = new Produto("Bolo", 70);
+    Produto p2 = new Produto("Arroz", 5);
+    Produto p3 = new Produto("Feijao", 55);
 
-    ArrayList<Produto> produtos = new ArrayList<>();
-    Produto p1 = new Produto("bolo", 70);
-    Produto p2 = new Produto("arroz", 5);
-    Produto p3 = new Produto("feijao", 50);
-    produtos.add(p1);
-    produtos.add(p2);
-    produtos.add(p3);
+    Carrinho car = new Carrinho();
 
-    carrinhoo car = new carrinhoo();
-		
-		car.setProdutos(produtos);
-    System.out.println(car.getPreco_total());
-    car.lista_Produtos();
+    car.addProduto(p1);
+    car.addProduto(p2);
+    car.addProduto(p3);
+
+    car.listaProdutos();
+    System.out.println("Preço Total: " + car.getPrecoTotal()); 
 
 
   }
